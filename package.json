@@ -2,20 +2,44 @@
   "name": "sdd-engineering-access",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
+  "main": "./public/start-electron.js",
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.10.15",
+    "@mui/material": "^5.10.15",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "concurrently": "^7.6.0",
+    "electron-is-dev": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "wait-on": "^6.0.1",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "electron-builder": "^23.6.0",
+    "electron": "^21.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-package": "./node_modules/.bin/electron-builder -c.extraMetadata.main=build/start-electron.js -mwl",
+    "preelectron-package": "npm run build"
+  },
+  "build": {
+    "appId": "com.rhysmorgan134.sdd.engineering",
+    "files": [ "build/**/*", "node_modules/**/*" ],
+    "directories":{
+      "buildResources": "assets"
+    }
   },
   "eslintConfig": {
     "extends": [

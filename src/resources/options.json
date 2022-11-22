@@ -1,0 +1,33 @@
+{
+  "types": {
+    "Jaguar": "Jaguar",
+    "Land Rover": "Land Rover"
+  },
+  "type": {
+    "Jaguar": {
+      "name": "jaguar",
+      "options": {
+        "X150 Odometer App": "CA",
+        "X250 Odometer App": "PC",
+        "X351 Odometer App": "AC",
+        "CCF Editor": "CR",
+        "Software Download": "LC",
+        "X351 Recover Keys": "RC",
+        "Vin Bypass": "CP",
+        "Vin Block Editor": "CL"
+      }
+    },
+    "Land Rover": {
+      "name": "Land Rover",
+      "options": {
+        "L316 Odometer App": "CL",
+        "L322 Odometer App": "PC",
+        "L322 Recover Keys": "LC",
+        "L322 Erase Keys": "AC",
+        "CCF Editor": "CP",
+        "Software Download": "CR",
+        "Option 8": "RC"
+      }
+    }
+  }
+}
