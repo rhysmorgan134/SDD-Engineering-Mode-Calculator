@@ -33,6 +33,6 @@ export const calculatePassword = function(type, option, vin, seed) {
     if(type === "Jaguar") {
         return (pwd.join("") + option + "CC")
     } else if (type === "Land Rover") {
-        return ("CC" + option + pwd.join(""))
+        return (pwd.join("") + "CC" + option)
     }
 }
